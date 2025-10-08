@@ -13,12 +13,12 @@ const ExprecienceCard: React.FC<ExprecienceCardProps> = ({ jobName, date, descri
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        borderLeft: '2px solid #D4D4D4',
+        borderLeft: '3px solid #D4D4D4',
         paddingInline: '20px',
       }}
     >
-      <Typography>{jobName}</Typography>
-      <Typography>{date}</Typography>
+      <Typography sx={{ fontSize: '19px', fontWeight: '400' }}>{jobName}</Typography>
+      <Typography sx={{ fontSize: '16px', color: '#525252' }}>{date}</Typography>
       <Typography>{description}</Typography>
     </Box>
   );

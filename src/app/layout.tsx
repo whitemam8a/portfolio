@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import MuiProvider from '@/providers/MuiProvider';
 
 export const metadata = {
   title: 'Daniil Sereda',
@@ -9,25 +10,27 @@ export const metadata = {
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter', // создаём CSS-переменную
+  variable: '--font-inter',
+  display: 'swap',
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            minHeight: '100vh',
-            maxWidth: '1440px',
-            mx: '40px',
-          }}
-        >
-          {children}
-        </Box>
+      <body className="font-sans">
+        <MuiProvider>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              minHeight: '100vh',
+              maxWidth: '1440px',
+              margin: '0 auto',
+            }}
+          >
+            {children}
+          </Box>
+        </MuiProvider>
       </body>
     </html>
   );

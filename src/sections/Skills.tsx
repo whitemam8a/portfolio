@@ -14,6 +14,7 @@ import {
   FigmaIcon,
   SeoIcon,
 } from '@/icons/icons';
+import Heading from '@/components/Heading';
 
 const technologies = [
   { name: 'React', icon: <ReactIcon /> },
@@ -27,9 +28,18 @@ const technologies = [
 
 const Skills = () => {
   return (
-    <Box sx={{ width: '100%' }}>
-      <Typography>Skills & Technologies</Typography>
-      <Box>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: '100%',
+        padding: '80px 10%',
+        gap: 5,
+      }}
+    >
+      <Heading>Skills & Technologies</Heading>
+      <Box sx={{ width: '100%' }}>
         <Swiper
           modules={[Autoplay]}
           spaceBetween={300}
@@ -53,7 +63,8 @@ const Skills = () => {
                   alignItems: 'center',
                   gap: 1,
                   padding: '20px',
-                  bgcolor: '#E5E7EB',
+                  bgcolor: '#FAFAFA',
+                  borderRadius: '8px',
                 }}
               >
                 {tech.icon}

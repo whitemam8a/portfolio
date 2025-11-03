@@ -1,30 +1,31 @@
 import Heading from '@/components/Heading';
 import { Box, Typography } from '@mui/material';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 const AboutMe = () => {
+  const t = useTranslations();
+
   return (
     <Box
+      id="about"
       sx={{
         display: 'flex',
         flexDirection: 'column',
         bgcolor: '#9BBCFF',
+        width: { xs: '100%', md: '80%' },
+        justifyContent: 'center',
         alignItems: 'center',
+        margin: '0 auto',
+        marginTop: { xs: '-30px', md: '0px' },
         padding: '80px 10%',
-        borderRadius: '100px 0px',
+        borderRadius: { xs: '0px', md: '100px 0px' },
         gap: 5,
+        boxShadow: '4px 10px 5px rgba(0, 0, 0, 0.1)',
       }}
     >
-      {/* <Typography component="h3" className="text-[30px]">
-        About Me
-      </Typography> */}
-      <Heading>About Me</Heading>
-      <Typography className="text-center max-w-[700px] text-[#525252]">
-        I&apos;m a passionate frontend developer with 3+ years of experience creating responsive and
-        user- friendly web applications. I specialize in React ecosystem and modern JavaScript, with
-        a strong focus on performance optimization and clean code. When I&apos;m not coding, I enjoy
-        learning new technologies and contributing to open-source projects.
-      </Typography>
+      <Heading>{t('About me')}</Heading>
+      <Typography className="text-center max-w-[700px] text-[#525252]">{t('about')}</Typography>
     </Box>
   );
 };

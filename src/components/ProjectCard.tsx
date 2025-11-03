@@ -19,9 +19,26 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ image, name, description, url }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card
+      sx={{
+        minWidth: 345,
+        height: 355,
+        display: 'flex',
+        flexDirection: 'column',
+        boxShadow: '4px 10px 5px rgba(0, 0, 0, 0.1)',
+        border: '1px solid #a7a7a775',
+        borderRadius: '9px',
+      }}
+    >
       <CardActionArea>
-        <CardMedia component="img" height="140" image={image} alt="E-commerce Dashboard" />
+        <CardMedia
+          component="img"
+          image={image}
+          alt="E-commerce Dashboard"
+          sx={{
+            objectFit: 'cover',
+          }}
+        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {name}
@@ -31,11 +48,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ image, name, description, url
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions sx={{ mt: 'auto' }}>
         <Button
+          component="a"
           variant="contained"
           size="small"
           sx={{ display: 'flex', gap: 1, justifyContent: 'center', bgcolor: '#000000' }}
+          href={url}
+          target="_blank"
         >
           <GithubIcon sx={{ fontSize: '16px' }} />
           <Typography variant="button" sx={{ fontSize: '14px' }}>

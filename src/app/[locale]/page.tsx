@@ -6,18 +6,19 @@ import Projects from '@/sections/Projects';
 import Skills from '@/sections/Skills';
 import Contacts from '@/sections/Contacts';
 import Footer from '@/sections/Footer';
+import ScrollToTopButton from '@/components/ScroolToTop';
+import { Divider } from '@mui/material';
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
       <AboutMe />
       <Skills />
+      <Divider></Divider>
       <Projects />
       <Experience />
       <Contacts />
-      <Footer />
     </>
   );
 }

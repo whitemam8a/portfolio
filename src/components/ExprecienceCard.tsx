@@ -5,15 +5,21 @@ type ExprecienceCardProps = {
   jobName: string;
   date: string;
   description: string;
+  color?: string;
 };
 
-const ExprecienceCard: React.FC<ExprecienceCardProps> = ({ jobName, date, description }) => {
+const ExprecienceCard: React.FC<ExprecienceCardProps> = ({
+  jobName,
+  date,
+  description,
+  color = '#000000ff',
+}) => {
   return (
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        borderLeft: '3px solid #D4D4D4',
+        borderLeft: `3px solid ${color}`,
         paddingInline: '20px',
       }}
     >

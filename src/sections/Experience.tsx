@@ -1,11 +1,15 @@
 import ExprecienceCard from '@/components/ExprecienceCard';
 import Heading from '@/components/Heading';
 import { Box, Typography } from '@mui/material';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 const Experience = () => {
+  const t = useTranslations();
+
   return (
     <Box
+      id="experience"
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -14,28 +18,22 @@ const Experience = () => {
         gap: 5,
       }}
     >
-      <Heading>Experience & Achievements</Heading>
+      <Heading>{t('Experience & Achievements')}</Heading>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
         <ExprecienceCard
           jobName={'Frontend Developer at LiberSave'}
           date={'2024 - Present'}
-          description={
-            'Developed and maintained 5+ client projects using React and Next.js, improving performance by 40%.'
-          }
+          description={t('liber')}
         />
         <ExprecienceCard
           jobName={'Data Operator at Saule IT Services'}
           date={'2023 - 2024'}
-          description={
-            'Developed and maintained 5+ client projects using React and Next.js, improving performance by 40%.'
-          }
+          description={t('saule')}
         />
         <ExprecienceCard
-          jobName={'Frontend Developer at TechCorp'}
-          date={'2023 - Present'}
-          description={
-            'Developed and maintained 5+ client projects using React and Next.js, improving performance by 40%.'
-          }
+          jobName={'Web developer at Mainor'}
+          date={'2022 - 2025'}
+          description={t('mainor')}
         />
       </Box>
     </Box>

@@ -22,12 +22,12 @@ const Experience = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
         <ExprecienceCard
           jobName={'Frontend Developer at LiberSave'}
-          date={'2023 - 2024'}
+          date={'2024 - current'}
           description={t('liber')}
         />
         <ExprecienceCard
-          jobName={'Data Operator at Saule IT Services'}
-          date={'2023 - 2023'}
+          jobName={'Sports Betting Operations & Risk Control Specialis'}
+          date={'2023 - 2024'}
           description={t('saule')}
         />
         <ExprecienceCard
